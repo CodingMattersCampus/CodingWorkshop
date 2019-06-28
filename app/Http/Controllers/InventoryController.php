@@ -15,7 +15,9 @@ class InventoryController extends Controller
     public function index()
     {
         //
-        return view('inventory.dashboard');
+        $inventories = Inventory::all();
+        return $inventories;
+        return view('inventory.dashboard',compact('inventories'));
     }
 
     /**
