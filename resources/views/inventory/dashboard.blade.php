@@ -20,19 +20,31 @@
         <table id="table_id" class="display">
             <thead>
             <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
+                <th>id</th>
+                <th>name</th>
+                <th>description</th>
+                <th>brand</th>
+                <th>sku</th>
+                <th>category</th>
+                <th>unit_cost</th>
+                <th>stock_limit</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
+            @foreach($inventories as $inventory)
             <tr>
-                <td>Row 1 Data 1</td>
-                <td>Row 1 Data 2</td>
+                <td>{{$inventory->id}}</td>
+                <td>{{$inventory->name}}</td>
+                <td>{{$inventory->description}}</td>
+                <td>{{$inventory->brand}}</td>
+                <td>{{$inventory->sku}}</td>
+                <td>{{$inventory->category}}</td>
+                <td>{{$inventory->unit_cost}}</td>
+                <td>{{$inventory->stock_limit}}</td>
+                <td></td>
             </tr>
-            <tr>
-                <td>Row 2 Data 1</td>
-                <td>Row 2 Data 2</td>
-            </tr>
+            @endforeach
             </tbody>
         </table>
 @stop

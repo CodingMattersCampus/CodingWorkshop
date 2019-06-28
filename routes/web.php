@@ -19,4 +19,4 @@ Route::get('/', function(){
     return "home";
 })->name('home');
 
-Route::resource('/dashboard','InventoriesController');
+Route::resource('/dashboard','InventoryController');

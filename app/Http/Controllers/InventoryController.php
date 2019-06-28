@@ -16,7 +16,6 @@ class InventoryController extends Controller
     {
         //
         $inventories = Inventory::all();
-        return $inventories;
         return view('inventory.dashboard',compact('inventories'));
     }
 
