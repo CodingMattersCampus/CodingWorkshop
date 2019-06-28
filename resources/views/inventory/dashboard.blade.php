@@ -3,6 +3,8 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 {{-- resources/views/admin/dashboard.blade.php --}}
 
+@include('inventory._modal');
+
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
@@ -14,6 +16,7 @@
 @section('content_header')
     <h1>Dashboard</h1>
 @stop
+
 
 @section('content')
 
@@ -42,7 +45,10 @@
                 <td>{{$inventory->category}}</td>
                 <td>{{$inventory->unit_cost}}</td>
                 <td>{{$inventory->stock_limit}}</td>
-                <td></td>
+                <td>
+                    <a href="" data-toggle="modal" data-target="#view-{{$inventory->id}}"><button class="btn btn-primary" type="submit">View</button></a>
+                    <a href="" data-toggle="modal" data-target="#edit-{{$inventory->id}}"><button class="btn btn-primary" type="submit">Edit</button></a>
+                </td>
             </tr>
             @endforeach
             </tbody>
@@ -58,5 +64,9 @@
         $(document).ready( function () {
             $('#table_id').DataTable();
         } );
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 @stop
