@@ -14,7 +14,15 @@
 @stop
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <div class="row">
+        <div class="col-md-11">
+         <h1>Dashboard</h1>
+        </div>
+        <div class="col-md-1">
+            <a href=""><button type="button" class="btn btn-primary float-right">Add Product</button></a>
+            <button type="button" class="btn btn-secondary float-right">Add Category</button>
+        </div>
+    </div>
 @stop
 
 
@@ -46,8 +54,8 @@
                 <td>{{$inventory->unit_cost}}</td>
                 <td>{{$inventory->stock_limit}}</td>
                 <td>
-                    <a href="" data-toggle="modal" data-target="#view-{{$inventory->id}}"><button class="btn btn-primary" type="submit">View</button></a>
-                    <a href="" data-toggle="modal" data-target="#edit-{{$inventory->id}}"><button class="btn btn-primary" type="submit">Edit</button></a>
+                    <a href="" data-toggle="modal" data-target="#view-{{$inventory->id}}"><button class="btn btn-primary">View</button></a>
+                    <a href="" data-toggle="modal" data-target="#edit-{{$inventory->id}}"><button class="btn btn-primary">Edit</button></a>
                 </td>
             </tr>
             @endforeach
