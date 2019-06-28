@@ -5,5 +5,7 @@
     @endsection
 
 @push('js')
-    <script></script>
+    <script>
+
+    </script>
     @endpush
