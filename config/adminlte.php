@@ -107,7 +107,16 @@ return [
     |
     */
 
-    'menu' => [],
+    'menu' => [ 'MAIN NAVIGATION',  [
+        'text' => 'Product',
+        'url' => '#',
+        'icon' => 'file'
+    ],[
+        'text' => 'Restock',
+        'url' => '#',
+        'icon' => 'file'
+    ]
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -141,7 +150,7 @@ return [
     */
 
     'plugins' => [
-        'datatables' => false,
+        'datatables' => true,
         'select2'    => false,
         'chartjs'    => false,
     ],
