@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::view('/login', 'login')->name('login');
 Route::post('/login', "LoginController")->name('login.submit');
 
