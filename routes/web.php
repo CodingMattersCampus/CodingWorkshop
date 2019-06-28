@@ -11,7 +11,6 @@
 |
 */
 
-
 Route::view('/login', 'login')->name('login');
 Route::post('/login', "LoginController")->name('login.submit');
 
@@ -20,4 +19,3 @@ Route::get('/', function(){
 })->name('home');
 
 Route::resource('/dashboard','InventoryController');
-

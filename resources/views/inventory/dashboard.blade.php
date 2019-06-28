@@ -19,7 +19,7 @@
          <h1>Dashboard</h1>
         </div>
         <div class="col-md-1">
-            <a href=""><button type="button" class="btn btn-primary float-right">Add Product</button></a>
+            <a href="{{route('dashboard.create')}}"><button type="button" class="btn btn-primary float-right">Add Product</button></a>
             <button type="button" class="btn btn-secondary float-right">Add Category</button>
         </div>
     </div>
