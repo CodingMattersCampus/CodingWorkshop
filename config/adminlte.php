@@ -109,7 +109,7 @@ return [
 
     'menu' => [ 'MAIN NAVIGATION',  [
         'text' => 'Product',
-        'url' => '#',
+        'url' => '',
         'icon' => 'file'
     ],[
         'text' => 'Restock',

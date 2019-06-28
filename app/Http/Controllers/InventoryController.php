@@ -16,7 +16,6 @@ class InventoryController extends Controller
     {
         //
         $inventories = Inventory::all();
-        return $inventories;
         return view('inventory.dashboard',compact('inventories'));
     }
 
@@ -28,6 +27,9 @@ class InventoryController extends Controller
     public function create()
     {
         //
+
+
+        return view('inventory.add-product');
     }
 
     /**
@@ -39,6 +41,8 @@ class InventoryController extends Controller
     public function store(Request $request)
     {
         //
+        Inventory::create($request->all());
+        return redirect("/dashboard");
     }
 
     /**
