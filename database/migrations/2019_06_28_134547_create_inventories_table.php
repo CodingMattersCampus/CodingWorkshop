@@ -16,7 +16,15 @@ class CreateInventoriesTable extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string()
+            $table->string('description');
+            $table->string('brand');
+            $table->string('sku');
+            $table->string('category');
+            $table->integer('qty');
+            $table->integer('stock_limit');
+            $table->integer('markup');
+            $table->decimal('unit_cost',9,3);
+            $table->decimal('sale_price',9,3);
             $table->timestamps();
         });
     }
