@@ -21,3 +21,6 @@ Route::get('/', function(){
 
 
 Route::get('/sales/dashboard', 'SalesController@chartjs');
+
+Route::get('/sales/dashboard','SalesController@create');
+Route::post('/sales/dashboard','SalesController@store');
